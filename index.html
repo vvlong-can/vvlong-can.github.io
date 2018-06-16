@@ -813,17 +813,86 @@
 </html> -->
 <!DOCTYPE HTML>
 <html>
+<head>
+  <link rel="stylesheet" href="animate.css">
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+    $("div").animate({animation:"bounce 1s"});
+  });
+});
+</script>
+  <style type="text/css">
+  .vv1 {
+    font-family : 微软雅黑,宋体;
+    font-size : 2em;
+    color : #f00;
+    animation:bounce 1s infinite;
+    -webkit-animation:bounce 1s infinite; /* Safari 和 Chrome */
+  }
 
+  #divObj1 {
+    animation:shake 2s infinite;
+    -webkit-animation:shake 2s infinite; /* Safari 和 Chrome */
+  }
+  </style>
+
+  <script type="text/javascript">
+    function alertMsg()
+    {
+      alert("Button 1 was clicked!")
+    }
+  </script>
+
+
+  <script type="text/javascript">
+  $(document).ready( function(){});
+function hiden(){
+  $("#divObj").hide();//hide()函数,实现隐藏,括号里还可以带一个时间参数(毫秒)例如hide(2000)以2000毫秒的速度隐藏,还可以带slow,fast
+}
+function slideToggle(){
+  $("#divObj").slideToggle(2000);//窗帘效果的切换,点一下收,点一下开,参数可以无,参数说明同上
+}
+function show(){
+  $("#divObj").show();//显示,参数说明同上
+}
+function toggle(){
+  $("#divObj").hide();
+  $("#divObj").toggle(2000);//显示隐藏切换,参数可以无,参数说明同上
+  $("#imgg").attr("src", "./IMG_2892.jpg");
+  // $("#imgg").width("300");
+  // $("#imgg").height("400");
+  $("#divObj1").slideDown();//窗帘效果展开
+}
+function slide(){
+$("#divObj").slideDown();//窗帘效果展开
+}
+</script>
+
+</head>
 <body>
 
-<p>
-谢谢你的出现
-<img src="/IMG_2888.jpg" width="300" height="400" />
-</p>
-<!-- <p>
-一幅动画图像：
-<img src="/i/eg_cute.gif" width="50" height="50" />
-</p> -->
+<p class="vv1">谢谢你的出现 嘻嘻</p>
+<!-- <img src="./IMG_2888.jpg" width=80% height=auto /> -->
+<!-- <p></p>
+<button>开始动画</button>
+<p></p> -->
+<!-- <button onclick="alertMsg()">点一下这里！！</button> -->
+<!-- <div style="background:#98bf21;height:100px;width:100px;position:absolute;"> -->
+<!-- </div> -->
+<!-- <input type="button" value="隐藏" onclick="hiden()"/>
+ <input type="button" value="显示" onclick="show()"/>
+ <input type="button" value="窗帘效果显示2" onclick="slide()"/>
+ <input type="button" value="窗帘效果的切换" onclick="slideToggle()"/> -->
+ <input type="button" value="点一下这儿！！！" onclick="toggle()"/>
+<div id="divObj">
+    <img id="imgg" src="./IMG_2888.jpg" width=80% height=auto />
+</div>
+<div id="divObj1">
+  <p>哈哈哈哈哈哈哈哈哈哈哈 可以吧！</p>
+</div>
 
 </body>
 </html>
